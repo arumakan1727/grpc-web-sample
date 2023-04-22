@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-package hello;
+package greeter;
+option go_package = "github.com/arumakan1727/grpc-web-sample/proto";
 
 service Greeter {
   rpc SayHello(HelloReq) returns (HelloResp);
