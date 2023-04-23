@@ -2,6 +2,23 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
+import { GreeterClient } from './grpc/greeter.client.ts';
+import { GrpcWebFetchTransport } from '@protobuf-ts/grpcweb-transport'
+
+const baseUrl = 'http://localhost:50051';
+const client = new GreeterClient(new GrpcWebFetchTransport({ baseUrl }));
+
+console.log(`Created GreeterClient with baseUrl=${baseUrl}`);
+
+client.sayHello({ name: 'Bob' })
+  .then((value) => {
+    const { status, response, method } = value;
+    console.log(`[Resp] status=${status} method=${method}`)
+    console.log(`[Resp] resp=${response}`)
+  })
+  .catch((err) => {
+    console.log(`[Err]`, err);
+  });
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

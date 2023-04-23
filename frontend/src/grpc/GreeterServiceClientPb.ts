@@ -8,7 +8,7 @@
 // versions:
 // 	protoc-gen-grpc-web v1.4.2
 // 	protoc              v3.20.3
-// source: proto/greeter.proto
+// source: greeter.proto
 
 
 /* eslint-disable */
@@ -17,7 +17,7 @@
 
 import * as grpcWeb from 'grpc-web';
 
-import * as proto_greeter_pb from '../proto/greeter_pb';
+import * as greeter_pb from './greeter_pb';
 
 
 export class GreeterClient {
@@ -42,29 +42,29 @@ export class GreeterClient {
   methodDescriptorSayHello = new grpcWeb.MethodDescriptor(
     '/greeter.Greeter/SayHello',
     grpcWeb.MethodType.UNARY,
-    proto_greeter_pb.HelloReq,
-    proto_greeter_pb.HelloResp,
-    (request: proto_greeter_pb.HelloReq) => {
+    greeter_pb.HelloReq,
+    greeter_pb.HelloResp,
+    (request: greeter_pb.HelloReq) => {
       return request.serializeBinary();
     },
-    proto_greeter_pb.HelloResp.deserializeBinary
+    greeter_pb.HelloResp.deserializeBinary
   );
 
   sayHello(
-    request: proto_greeter_pb.HelloReq,
-    metadata: grpcWeb.Metadata | null): Promise<proto_greeter_pb.HelloResp>;
+    request: greeter_pb.HelloReq,
+    metadata: grpcWeb.Metadata | null): Promise<greeter_pb.HelloResp>;
 
   sayHello(
-    request: proto_greeter_pb.HelloReq,
+    request: greeter_pb.HelloReq,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.RpcError,
-               response: proto_greeter_pb.HelloResp) => void): grpcWeb.ClientReadableStream<proto_greeter_pb.HelloResp>;
+               response: greeter_pb.HelloResp) => void): grpcWeb.ClientReadableStream<greeter_pb.HelloResp>;
 
   sayHello(
-    request: proto_greeter_pb.HelloReq,
+    request: greeter_pb.HelloReq,
     metadata: grpcWeb.Metadata | null,
     callback?: (err: grpcWeb.RpcError,
-               response: proto_greeter_pb.HelloResp) => void) {
+               response: greeter_pb.HelloResp) => void) {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +

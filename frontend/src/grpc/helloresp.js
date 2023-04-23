@@ -1,4 +1,4 @@
-// source: proto/greeter.proto
+// source: greeter.proto
 /**
  * @fileoverview
  * @enhanceable
