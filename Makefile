@@ -24,8 +24,6 @@ gen/backend:
 gen/frontend:
 	env PATH="./frontend/node_modules/@protobuf-ts/plugin/bin:$$PATH" \
 		protoc -I proto \
-		--js_out=import_style=commmonjs,binary:$(PROTOC_FRONTEND_OUT_DIR) \
-		--grpc-web_out=import_style=typescript,mode=grpcweb:$(PROTOC_FRONTEND_OUT_DIR) \
 		--ts_out=$(PROTOC_FRONTEND_OUT_DIR) \
 		proto/*.proto
 

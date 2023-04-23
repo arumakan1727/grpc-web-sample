@@ -4,23 +4,17 @@ dependencies:
   '@protobuf-ts/grpcweb-transport':
     specifier: ^2.8.3
     version: 2.8.3
-  '@protobuf-ts/plugin':
-    specifier: ^2.8.3
-    version: 2.8.3
   '@protobuf-ts/runtime':
     specifier: ^2.8.3
     version: 2.8.3
   '@protobuf-ts/runtime-rpc':
     specifier: ^2.8.3
     version: 2.8.3
-  google-protobuf:
-    specifier: ^3.21.2
-    version: 3.21.2
-  grpc-web:
-    specifier: ^1.4.2
-    version: 1.4.2
 
 devDependencies:
+  '@protobuf-ts/plugin':
+    specifier: ^2.8.3
+    version: 2.8.3
   typescript:
     specifier: ^5.0.2
     version: 5.0.2
@@ -240,7 +234,7 @@ packages:
     dependencies:
       '@protobuf-ts/runtime': 2.8.3
       typescript: 3.9.10
-    dev: false
+    dev: true
 
   /@protobuf-ts/plugin@2.8.3:
     resolution: {integrity: sha512-MZG6up/AJKPviHLCH6p3jBDte4FMP08f01AvgmRjgZen4jRfIql59cptBCs4gaw+4icLb8AWtGY6O04D/hNHSw==}
@@ -251,22 +245,20 @@ packages:
       '@protobuf-ts/runtime': 2.8.3
       '@protobuf-ts/runtime-rpc': 2.8.3
       typescript: 3.9.10
-    dev: false
+    dev: true
 
   /@protobuf-ts/protoc@2.8.3:
     resolution: {integrity: sha512-j5REioDr7KT/cyfBD6k+FNkQFzkqv38PuUw+BsQ0dcIFJqaP8PnilbwtPn6kAJtI5QxFWPkoAr3fsWtjK7k6tQ==}
     hasBin: true
-    dev: false
+    dev: true
 
   /@protobuf-ts/runtime-rpc@2.8.3:
     resolution: {integrity: sha512-Tb6nuevgezjGNnT8WF+aveGWeI5xeAbNpySd/nzknKx6ynepXdlNz5cN0xIADeOgDJHo/05Ka+vZ5ZI33tz2Og==}
     dependencies:
       '@protobuf-ts/runtime': 2.8.3
-    dev: false
 
   /@protobuf-ts/runtime@2.8.3:
     resolution: {integrity: sha512-nVL1s5wWpF6U+wtWTEWfUPD9Ockckj+fHqhzgm41CKV4Oma3D/2M6tzqOQ+wrm4GZu1bt+s6f43feNnar6fhjA==}
-    dev: false
 
   /esbuild@0.17.17:
     resolution: {integrity: sha512-/jUywtAymR8jR4qsa2RujlAF7Krpt5VWi72Q2yuLD4e/hvtNcFQ0I1j8m/bxq238pf3/0KO5yuXNpuLx8BE1KA==}
@@ -306,14 +298,6 @@ packages:
     dev: true
     optional: true
 
-  /google-protobuf@3.21.2:
-    resolution: {integrity: sha512-3MSOYFO5U9mPGikIYCzK0SaThypfGgS6bHqrUGXG3DPHCrb+txNqeEcns1W0lkGfk0rCyNXm7xB9rMxnCiZOoA==}
-    dev: false
-
-  /grpc-web@1.4.2:
-    resolution: {integrity: sha512-gUxWq42l5ldaRplcKb4Pw5O4XBONWZgz3vxIIXnfIeJj8Jc3wYiq2O4c9xzx/NGbbPEej4rhI62C9eTENwLGNw==}
-    dev: false
-
   /nanoid@3.3.6:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -350,7 +334,7 @@ packages:
     resolution: {integrity: sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: false
+    dev: true
 
   /typescript@5.0.2:
     resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
