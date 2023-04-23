@@ -11,5 +11,9 @@
   "devDependencies": {
     "typescript": "^5.0.2",
     "vite": "^4.3.0"
+  },
+  "dependencies": {
+    "google-protobuf": "^3.21.2",
+    "grpc-web": "^1.4.2"
   }
 }
